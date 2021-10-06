@@ -48,14 +48,14 @@ namespace RlktWarehousePreBuildVerInc
             int iVersion = GetVersionFromFile(args[0]);
             if(iVersion > 0)
             {
-                Console.WriteLine("[Warehouse Version] OldVersion:%d, NewVersion: %d", iVersion, iVersion + 1);
+                Console.WriteLine("[Warehouse Version] OldVersion:{0}, NewVersion: {1}", iVersion, iVersion + 1);
 
                 iVersion++;
                 SetVersionToFile(args[0], iVersion);
             }
             else
             {
-                Console.WriteLine("[Version] Could not get version from file %s.", args[0]);
+                Console.WriteLine("[Version] Could not get version from file {0}.", args[0]);
                 return;
             }
         }
